@@ -1,0 +1,52 @@
+Arguments: 
+  /Users/rwilliams/.nvm/versions/node/v14.16.0/bin/node /Users/rwilliams/.nvm/versions/node/v14.16.0/bin/yarn install
+
+PATH: 
+  /Users/rwilliams/.gvm/bin:/Users/rwilliams/.jenv/shims:/Users/rwilliams/.jenv/shims:/Users/rwilliams/.cargo/bin:/Users/rwilliams/.nvm/versions/node/v14.16.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/rwilliams/bin:/Users/rwilliams/.cargo/bin:/Users/rwilliams/.gvm/bin:/Users/rwilliams/.jenv/shims:/Users/rwilliams/.nvm/versions/node/v14.16.0/bin:/Users/rwilliams/go/bin:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:/Users/rwilliams/Library/Android/sdk/platform-tools:/Users/rwilliams/.local/bin:/Users/rwilliams/.rvm/bin:/Users/rwilliams/.local/bin:/Users/rwilliams/.rvm/bin:/Users/rwilliams/.local/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.16.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://npm.anchor.fm/dotenv: unregistered users are not allowed to access package dotenv
+      at Request.params.callback [as _callback] (/Users/rwilliams/.nvm/versions/node/v14.16.0/lib/node_modules/yarn/lib/cli.js:66988:18)
+      at Request.self.callback (/Users/rwilliams/.nvm/versions/node/v14.16.0/lib/node_modules/yarn/lib/cli.js:140662:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/Users/rwilliams/.nvm/versions/node/v14.16.0/lib/node_modules/yarn/lib/cli.js:141634:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/Users/rwilliams/.nvm/versions/node/v14.16.0/lib/node_modules/yarn/lib/cli.js:141556:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "name": "catstronauts-server-complete",
+    "version": "1.0.0",
+    "description": "back-end demo app for Apollo's lift-off course",
+    "main": "src/index.js",
+    "scripts": {
+      "start": "nodemon src/index"
+    },
+    "dependencies": {},
+    "devDependencies": {
+      "dotenv": "^8.2.0",
+      "nodemon": "^2.0.4"
+    },
+    "author": "Raphael Terrier @R4ph-t",
+    "license": "MIT",
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
