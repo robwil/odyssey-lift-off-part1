@@ -4,6 +4,12 @@ const resolvers = {
         tracksForHome: (_parent, _args, context, _info) => {
             const { dataSources } = context;
             return dataSources.trackAPI.getTracksForHome();
+        },
+        // get single track by ID
+        track: (_parent, args, context, _info) => {
+            const { id } = args;
+            const { dataSources } = context;
+            return dataSources.trackAPI.getTrack(id);
         }
     },
     Track: {
@@ -12,8 +18,14 @@ const resolvers = {
             const { authorId } = parent;
             const { dataSources } = context;
             return dataSources.trackAPI.getAuthor(authorId);
+        },
+        modules: (parent, _args, context, _info) => {
+            // here, parent is the REST result for the parent Track
+            const { id: trackId } = parent;
+            const { dataSources } = context;
+            return dataSources.trackAPI.getTrackModules(trackId);
         }
-    }
+    },
 };
 
 module.exports = resolvers;
