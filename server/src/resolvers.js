@@ -10,6 +10,11 @@ const resolvers = {
             const { id } = args;
             const { dataSources } = context;
             return dataSources.trackAPI.getTrack(id);
+        },
+        module: (_parent, args, context, _info) => {
+            const { id } = args;
+            const { dataSources } = context;
+            return dataSources.trackAPI.getModule(id);
         }
     },
     Track: {
@@ -26,6 +31,14 @@ const resolvers = {
             return dataSources.trackAPI.getTrackModules(trackId);
         }
     },
+    Module: {
+        track: (parent, _args, context, _info) => {
+            // here, parent is the REST result for the parent Module
+            const { trackId } = parent;
+            const { dataSources } = context;
+            return dataSources.trackAPI.getTrack(trackId);
+        },
+    }
 };
 
 module.exports = resolvers;
